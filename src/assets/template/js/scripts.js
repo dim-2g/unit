@@ -65,6 +65,14 @@ $(function() {
         collapseLink.hide();
     });
 
+    $("[data-menu-parent]").hover(function () {
+        $('[data-menu-childs]').removeClass('active');
+        var menuParent = $(this).attr('data-menu-parent');
+        $('[data-menu-childs="'+menuParent+'"]').addClass('active');
+    }, 
+    function () {
+        //$('[data-menu-childs]').removeClass('active');
+    });
 
 
     initCategorySlider();

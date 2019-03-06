@@ -1,0 +1,120 @@
+.main-slider{
+  &__box{
+    position: relative;
+  }
+  &__items{
+    height: 400px;
+    overflow: hidden;
+    opacity: 0;
+    &.slick-initialized{
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+    }
+  }
+  &__item{
+    height: 400px;
+    padding: 50px;
+  }
+  &__info{
+    max-width: 400px;
+  }
+  &__flag{
+    height: 50px;
+  }
+  &__caption{
+    font-size: 30px;
+    color: #606060;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &__text{
+    font-size: 14px;
+    color: #606060;
+    line-height: 145%;
+    margin-bottom: 25px;
+  }
+  &__more{
+    background-color: $orange;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: $anim;
+    &:hover{
+      color: $orange;
+      background-color: #fff;
+    }
+  }
+  &__nav{
+    position: absolute;
+    left: 50px;
+    bottom: 22px;
+  }
+  &__prev{
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    background-color: #d7dadb;
+    cursor: pointer;
+    border-radius: 13px 0 0 13px;
+    margin-right: 4px;
+    position: relative;
+    &:before{
+      display: inline-block;
+      content: "";
+      @include sprite($main-slider-prev);
+      position: absolute;
+      top: 8px;
+      left: 12px;
+
+    }
+    &:hover{
+      background-color: #b6b6b6;
+    }
+  }
+  &__next{
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    background-color: #d7dadb;
+    cursor: pointer;
+    border-radius: 0 13px 13px 0;
+    position: relative;
+    &:before{
+      display: inline-block;
+      content: "";
+      @include sprite($main-slider-next);
+      position: absolute;
+      top: 8px;
+      right: 12px;
+    }
+    &:hover{
+      background-color: #b6b6b6;
+    }
+  }
+}
+
+.slider-flag{
+  padding: 5px 8px;
+  border-radius: 14px;
+  background-color: #808080;
+  color: #fff;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 1px;
+  margin-left: 4px;
+  &--popular{
+    background-color: $green;
+  }
+  &--action{
+    background-color: $red;
+  }
+  &--new{
+    background-color: #f8b922;
+  }
+}

@@ -1,0 +1,30 @@
+.category-slider{
+  .slick-dots{
+    bottom: -18px;
+    li{
+      width: 23px;
+      height: 15px;
+      margin: 0 3px;
+      button{
+        padding: 5px 0;
+        width: 23px;
+        &:before{
+          display: inline-block;
+          content: "";
+          background-color: #d9d9d9;
+          width: 23px;
+          height: 5px;
+          position: relative;
+          opacity: 1;
+        }
+      }
+      &.slick-active{
+        button{
+          &:before{
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.catalog-category{
+  &__grid{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  &__item{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 33.33%;
+    margin-bottom: 30px;
+  }
+  &__card{
+    background-color: #f7f7f7;
+    height: 100%;
+    padding: 10px 30px 20px;
+  }
+  &__name{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    padding-right: 102px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 15px;
+    position: relative;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      right: 0;
+    }
+    &--video:before{
+      @include sprite($catalog-category-video);
+    }
+    &--fire-equipment:before{
+      @include sprite($catalog-category-fire-equipment);
+    }
+    &--warning:before{
+      @include sprite($catalog-category-warning);
+    }
+    &--firefighting:before{
+      @include sprite($catalog-category-firefighting);
+    }
+    &--access:before{
+      @include sprite($catalog-category-access);
+    }
+    &--electrical:before{
+      @include sprite($catalog-category-electrical);
+    }
+    &--explosionproof:before{
+      @include sprite($catalog-category-explosionproof);
+    }
+    &--cable:before{
+      @include sprite($catalog-category-cable);
+    }
+    &--box:before{
+      @include sprite($catalog-category-box);
+    }
+    &--lighting:before{
+      @include sprite($catalog-category-lighting);
+    }
+    &--network:before{
+      @include sprite($catalog-category-network);
+    }
+    &--mounting:before{
+      @include sprite($catalog-category-mounting);
+    }
+    &--other:before{
+      @include sprite($catalog-category-other);
+    }
+  }
+
+  &__body{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li{
+        position: relative;
+        margin-bottom: 7px;
+        line-height: 114%;
+        a{
+          text-decoration: none;
+          font-size: 12px;
+          color: #404040;
+          padding-left: 18px;
+          display: block;
+          transition: $anim;
+          &:hover{
+            color: $orange;
+          }
+        }
+        &:before{
+          display: inline-block;
+          content: '';
+          @include sprite($paragraph);
+          position: absolute;
+          top: 5px;
+          left: 0;
+        }
+      }
+    }
+  }
+}

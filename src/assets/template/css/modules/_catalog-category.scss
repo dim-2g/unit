@@ -1,34 +1,61 @@
 .catalog-category{
   &__grid{
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+    flex-direction: column;
+    @media ($bp-larger-than-tablet) {
+      flex-direction: row;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
   }
   &__item{
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 33.33%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    @media ($bp-larger-than-tablet) {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 50%;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 33.33%;
+    }
   }
   &__card{
     background-color: #f7f7f7;
     height: 100%;
-    padding: 10px 30px 20px;
+    padding: 10px 30px 10px;
+    @media ($bp-larger-than-tablet) {
+      padding: 10px 30px 20px;
+    }
+    &.open{
+      .catalog-category__body{
+        display: block;
+        padding-top: 20px;
+      }
+    }
   }
   &__name{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
-    color: #333333;
-    padding-right: 102px;
-    border-bottom: 1px solid #d9d9d9;
-    margin-bottom: 15px;
+    color: #4c4c4c;
+    padding-right: 68px;
     position: relative;
-    min-height: 68px;
+    min-height: 45px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    @media ($bp-larger-than-tablet) {
+      cursor: default;
+      padding-right: 102px;
+      min-height: 68px;
+      color: #333333;
+      font-size: 14px;
+      border-bottom: 1px solid #d9d9d9;
+      margin-bottom: 15px;
+    }
     &:before {
       display: inline-block;
       content: '';
@@ -77,6 +104,10 @@
   }
 
   &__body{
+    display: none;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
     ul{
       margin: 0;
       padding: 0;

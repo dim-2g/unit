@@ -40,7 +40,15 @@
 				<a href="#"><img src="/assets/template/images/logo.png" alt=""></a>
 			</div>
 			<div class="header__city">
-				<a href="#">Новосибирск</a>
+				<div class="city-changer">
+					<a href="#" class="city-changer__current">Новосибирск</a>
+					<ul>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Сызрань</a></li>
+						<li><a href="#">Омск</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="header__email">
 				<div class="header__email-box">
@@ -56,9 +64,13 @@
 					<div class="header__phone-lead">прием заявок, с 9:00 до 21:00</div>
 				</div>
 			</div>
+			<div class="header__burger toggle-menu">
+				<span></span>
+			</div>
 			<div class="header__cart">
-				<div id="msMiniCart" class="cart-top full" data-cart-toggle>
+				<div id="msMiniCart" class="cart-top full">
 					<span class="ms2_total_count cart-top__total">0</span>
+					<a href="#" class="cart-top__toggle" data-cart-toggle></a>
 					<!--START CART-->
 					<div class="cart-items cart-top__items">
 						<a href="#" data-cart-toggle="" class="cart-top__close"></a>
@@ -96,17 +108,52 @@
 						<div class="cart-top__footer">
 							<a class="cart-top__order" href="#">Перейти в корзину</a>
 						</div>
+						<div class="cart-top__footer--empty">
+							пусто
+						</div>
 
 					</div>
 					<!--END CART-->
 				</div>
 			</div>
 		</div>
+
+
+
+	</div>
+</div>
+<div class="mobile-menu__wrapper">
+	<div class="mobile-menu">
+		<div class="container">
+			<div class="mobile-city">
+				<div class="mobile-city__caption">Ваш город:</div>
+				<div class="mobile-city__value">
+					<a href="#" class="mobile-city__name" data-toggle=".mobile-menu__cities">Новосибирск</a>
+				</div>
+			</div>
+			<div class="mobile-menu__cities">
+				<ul>
+					<li><a href="#">Москва</a></li>
+					<li><a href="#">Санкт-Петербург</a></li>
+					<li><a href="#">Сызрань</a></li>
+					<li><a href="#">Омск</a></li>
+				</ul>
+			</div>
+			<ul class="">
+				<li class="header-nav-item first"><a href="#" >О компании</a></li>
+				<li class="header-nav-item"><a href="#" >Услуги монтажа</a></li>
+				<li class="header-nav-item"><a href="#" >Гаранития и сервис</a></li>
+				<li class="header-nav-item"><a href="#" >Доставка и оплата</a></li>
+				<li class="header-nav-item"><a href="#" >Сотрудничество</a></li>
+				<li class="header-nav-item"><a href="#" >Статьи </a></li>
+				<li class="header-nav-item last"><a href="#" >Контакты</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 
 <div class="navigation">
-	<div class="container">
+	<div class="container phablet-container">
 		<div class="navigation__box">
 			<div class="navigation__grid">
 				<div class="menu-catalog">
@@ -321,7 +368,7 @@
 
 
 	<div class="main-category">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-category__grid category-slider">
 				<div class="main-category__item">
 					<a href="#" class="main-category__card main-category__card--video">
@@ -445,45 +492,67 @@
 			</div>
 		</div>
 	</div>
+
+	<style>
+		.main-slider__item--1{
+			background-image: url('/assets/template/images/slide-1.png');
+		}
+		@media (max-width: 450px){
+			.main-slider__item--1{
+				background-image: url('/assets/template/images/slide-1-small.png');
+			}
+		}
+		.main-slider__item--2{
+			background-image: url('/assets/template/images/slide-1.png');
+		}
+		@media (max-width: 450px){
+			.main-slider__item--2{
+				background-image: url('/assets/template/images/slide-1-small.png');
+			}
+		}
+	</style>
 	
 	<div class="main-slider">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-slider__box">
 				<div class="main-slider__items  main-slider-js">
-					<div class="main-slider__item" style="background-image: url('/assets/template/images/slide-1.png');">
-						<div class="main-slider__info">
-							<div class="main-slider__flag">
-								<div class="slider-flag slider-flag--action">Акция</div>
-							</div>
-							<div class="main-slider__caption">
-								Поворотные<br /> AHD Видеокамеры
-							</div>
-							<div class="main-slider__text">
-								При покупке  товара на сумму от  32 000 руб.,
-								бесплатная установка и тестирование оборудования
-								в день покупки.
-							</div>
-							<div class="main-slider__link">
-								<a href="#" class="main-slider__more">Подробнее</a>
+					<div>
+						<div class="main-slider__item main-slider__item--1">
+							<div class="main-slider__info">
+								<div class="main-slider__flag">
+									<div class="slider-flag slider-flag--action">Акция</div>
+								</div>
+								<div class="main-slider__caption">
+									Поворотные<br /> AHD Видеокамеры
+								</div>
+								<div class="main-slider__text">
+									При покупке  товара на сумму от  <nobr>32 000 руб.,</nobr>
+									бесплатная установка и тестирование оборудования
+									в день покупки.
+								</div>
+								<div class="main-slider__link">
+									<a href="#" class="main-slider__more">Подробнее</a>
+								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="main-slider__item" style="background-image: url('/assets/template/images/slide-1.png');">
-						<div class="main-slider__info">
-							<div class="main-slider__flag">
-								<div class="slider-flag slider-flag--new">Новинка</div>
-							</div>
-							<div class="main-slider__caption">
-								Второй<br /> слайд
-							</div>
-							<div class="main-slider__text">
-								При покупке  товара на сумму от  32 000 руб.,
-								бесплатная установка и тестирование оборудования
-								в день покупки.
-							</div>
-							<div class="main-slider__link">
-								<a href="#" class="main-slider__more">Подробнее</a>
+					<div>
+						<div class="main-slider__item main-slider__item--2" style="background-image: url('/assets/template/images/slide-1.png');">
+							<div class="main-slider__info">
+								<div class="main-slider__flag">
+									<div class="slider-flag slider-flag--new">Новинка</div>
+								</div>
+								<div class="main-slider__caption">
+									Второй<br /> слайд
+								</div>
+								<div class="main-slider__text">
+									При покупке  товара на сумму от  32 000 руб.,
+									бесплатная установка и тестирование оборудования
+									в день покупки.
+								</div>
+								<div class="main-slider__link">
+									<a href="#" class="main-slider__more">Подробнее</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -859,8 +928,15 @@
 		<div class="popular-tab__nav">
 			<div class="container">
 				<div class="popular-tab__list">
-					<a href="#" class="popular-tab__link active" data-tab=".xtab-popular">Самые популярные товары</a>
-					<a href="#" class="popular-tab__link" data-tab=".xtab-newis">Новинки нашего магазина</a>
+					<a href="#" class="popular-tab__link active" data-tab=".xtab-popular">
+						<span class="in-mobile">Популярные товары</span>
+						<span class="in-desktop">Самые популярные товары</span>
+					</a>
+					<span class="popular-tab__separator"></span>
+					<a href="#" class="popular-tab__link" data-tab=".xtab-newis">
+						<span class="in-mobile">Новинки</span>
+						<span class="in-desktop">Новинки нашего магазина</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -979,7 +1055,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--popular">Популярное</div>
@@ -1016,7 +1092,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--popular">Популярное</div>
@@ -1053,7 +1129,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--popular">Популярное</div>
@@ -1090,7 +1166,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--popular">Популярное</div>
@@ -1127,7 +1203,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--popular">Популярное</div>
@@ -1287,7 +1363,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--new">Новинка</div>
@@ -1323,7 +1399,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--new">Новинка</div>
@@ -1359,7 +1435,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--new">Новинка</div>
@@ -1395,7 +1471,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--new">Новинка</div>
@@ -1431,7 +1507,7 @@
 							    </div>
 							</div>
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							<div class="product-card">
 							    <div class="product-card__flags">
 							        <div class="product-flag product-flag--new">Новинка</div>
@@ -1482,9 +1558,9 @@
 	</div>
 
 	<div class="main-partners">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-partners__header">Наши партнеры</div>
-			<div class="main-partners__grid">
+			<div class="main-partners__grid main-partners-slider">
 
 				<div class="main-partners__item">
 					<div class="main-partners__card">
@@ -1562,7 +1638,7 @@
 			<div class="main-news__tabs">
 				<div class="xtab active xtab-news-security">
 					<div class="main-news__grid">
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news1.png" alt="">
@@ -1575,7 +1651,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news2.png" alt="">
@@ -1649,7 +1725,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news1.png" alt="">
@@ -1662,7 +1738,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news2.png" alt="">
@@ -1687,11 +1763,11 @@
 	</div>
 
 	<div class="main-viewed">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-viewed__header">
 				Вы смотрели следующее:
 			</div>
-			<div class="main-viewed__grid jumped">
+			<div class="main-viewed__grid jumped main-viewed-slider">
 				<div class="main-viewed__item">
 					<a href="#" class="viewed-card">
 						<div class="viewed-card__image">
@@ -1807,7 +1883,6 @@
                                     КПП: 012378987
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="footer-body__email-box">
@@ -1832,9 +1907,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="footer-body__burger toggle-footer-menu">
+                        <span></span>
+                    </div>
                 </div>
 
             </div>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Услуги монтажа</a></li>
+                    <li><a href="#">Гарантия и сервис</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="footer-body__header">Наш адрес</div>
+                <div class="footer-body__value">
+                    Россия, Москва, 197342,<br />
+                    ул. Длинноеназвание, дом 1, БЦ "Название", офис 1
+                </div>
+                <div class="footer-body__value">
+                    <a href="#" class="color-orange">Карта проезда</a>
+                </div>
+                <div class="footer-body__value">
+                    <div class="footer-body__requisites">
+                        <div class="footer-body__requisite">
+                            ОГРН: 012378987
+                        </div>
+                        <div class="footer-body__requisite">
+                            ИНН: 012378987
+                        </div>
+                        <div class="footer-body__requisite">
+                            КПП: 012378987
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="bottom-line">
@@ -1854,6 +1965,8 @@
     </div>
 </div>
 
+<a href="#top" class="to-top"></a>
+
 <script src="/assets/template/vendor/jquery-3.2.1.min.js"></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 <script src="/assets/template/vendor/jquery.inputmask.bundle.js"></script>
@@ -1864,5 +1977,6 @@
 <script src="/assets/template/vendor/slick/slick.js"></script>
 <script src="/assets/template/vendor/sly.min.js"></script>
 <script src="/assets/template/js/scripts.js"></script>
+
 </body>
 </html>

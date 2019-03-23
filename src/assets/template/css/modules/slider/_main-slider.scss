@@ -13,27 +13,53 @@
     }
   }
   &__item{
-    height: 400px;
-    padding: 50px;
+    height: 385px;
+    padding: 28px 20px;
+    @media ($bp-larger-than-tablet) {
+      padding: 50px;
+      height: 400px;
+    }
   }
   &__info{
     max-width: 400px;
   }
   &__flag{
     height: 50px;
+    text-align: center;
+    @media ($bp-larger-than-tablet) {
+      text-align: left;
+    }
   }
   &__caption{
-    font-size: 30px;
+    font-size: 24px;
     color: #606060;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 140%;
+    @media ($bp-larger-than-tablet) {
+      font-size: 30px;
+      text-align: left;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
   }
   &__text{
     font-size: 14px;
     color: #606060;
     line-height: 145%;
     margin-bottom: 25px;
+    text-align: center;
+    @media ($bp-larger-than-tablet) {
+      text-align: left;
+    }
+  }
+  &__link{
+    text-align: center;
+    @media ($bp-larger-than-tablet) {
+      text-align: left;
+    }
   }
   &__more{
     background-color: $orange;
@@ -52,8 +78,14 @@
   }
   &__nav{
     position: absolute;
-    left: 50px;
-    bottom: 22px;
+    left: 50%;
+    bottom: 26px;
+    transform: translateX(-50%);
+    @media ($bp-larger-than-tablet) {
+      left: 50px;
+      transform: none;
+      bottom: 22px;
+    }
   }
   &__prev{
     width: 30px;

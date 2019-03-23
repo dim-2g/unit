@@ -1,11 +1,12 @@
 .bp-larger-than{
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     border: 1px #eaeaea solid;
     padding: 5px;
     background-color: #fff;
     z-index: 1000;
+    font-size: 12px;
     &-mobile{
       opacity: 0.5;
       @media($bp-larger-than-mobile){

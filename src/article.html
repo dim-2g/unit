@@ -40,7 +40,15 @@
 				<a href="#"><img src="/assets/template/images/logo.png" alt=""></a>
 			</div>
 			<div class="header__city">
-				<a href="#">Новосибирск</a>
+				<div class="city-changer">
+					<a href="#" class="city-changer__current">Новосибирск</a>
+					<ul>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Сызрань</a></li>
+						<li><a href="#">Омск</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="header__email">
 				<div class="header__email-box">
@@ -56,9 +64,13 @@
 					<div class="header__phone-lead">прием заявок, с 9:00 до 21:00</div>
 				</div>
 			</div>
+			<div class="header__burger toggle-menu">
+				<span></span>
+			</div>
 			<div class="header__cart">
-				<div id="msMiniCart" class="cart-top full" data-cart-toggle>
+				<div id="msMiniCart" class="cart-top full">
 					<span class="ms2_total_count cart-top__total">0</span>
+					<a href="#" class="cart-top__toggle" data-cart-toggle></a>
 					<!--START CART-->
 					<div class="cart-items cart-top__items">
 						<a href="#" data-cart-toggle="" class="cart-top__close"></a>
@@ -96,17 +108,52 @@
 						<div class="cart-top__footer">
 							<a class="cart-top__order" href="#">Перейти в корзину</a>
 						</div>
+						<div class="cart-top__footer--empty">
+							пусто
+						</div>
 
 					</div>
 					<!--END CART-->
 				</div>
 			</div>
 		</div>
+
+
+
+	</div>
+</div>
+<div class="mobile-menu__wrapper">
+	<div class="mobile-menu">
+		<div class="container">
+			<div class="mobile-city">
+				<div class="mobile-city__caption">Ваш город:</div>
+				<div class="mobile-city__value">
+					<a href="#" class="mobile-city__name" data-toggle=".mobile-menu__cities">Новосибирск</a>
+				</div>
+			</div>
+			<div class="mobile-menu__cities">
+				<ul>
+					<li><a href="#">Москва</a></li>
+					<li><a href="#">Санкт-Петербург</a></li>
+					<li><a href="#">Сызрань</a></li>
+					<li><a href="#">Омск</a></li>
+				</ul>
+			</div>
+			<ul class="">
+				<li class="header-nav-item first"><a href="#" >О компании</a></li>
+				<li class="header-nav-item"><a href="#" >Услуги монтажа</a></li>
+				<li class="header-nav-item"><a href="#" >Гаранития и сервис</a></li>
+				<li class="header-nav-item"><a href="#" >Доставка и оплата</a></li>
+				<li class="header-nav-item"><a href="#" >Сотрудничество</a></li>
+				<li class="header-nav-item"><a href="#" >Статьи </a></li>
+				<li class="header-nav-item last"><a href="#" >Контакты</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 
 <div class="navigation">
-	<div class="container">
+	<div class="container phablet-container">
 		<div class="navigation__box">
 			<div class="navigation__grid">
 				<div class="menu-catalog">
@@ -349,26 +396,38 @@
                         существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что реализация намеченных
                         плановых заданий требуют определения и уточнения систем массового участия. Равным образом реализация намеченных плановых
                         заданий требуют определения и уточнения соответствующий условий активизации.</p>
-                    <p>Таким образом консультация с широким активом в значительной степени обуславливает создание модели развития. Повседневная практика
+                    <p class="article__text--mobile">Таким образом консультация с широким активом в значительной степени обуславливает создание модели развития. Повседневная практика
                         показывает, что рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития.</p>
-                    <p>Равным образом дальнейшее развитие различных форм деятельности требуют от нас анализа направлений прогрессивного развития.
+                    <p class="article__text--mobile">Равным образом дальнейшее развитие различных форм деятельности требуют от нас анализа направлений прогрессивного развития.
                         Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа модели развития.
                         Товарищи! сложившаяся структура организации позволяет оценить значение дальнейших направлений развития. Значимость этих проблем настолько
                         очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития.</p>
-                    <div class="article__images">
-                        <a href="/assets/template/images/tmp/articles-image1.png"><img src="/assets/template/images/tmp/articles-image1.png" alt=""></a>
-                        <a href="/assets/template/images/tmp/articles-image2.png"><img src="/assets/template/images/tmp/articles-image2.png" alt=""></a>
-                        <a href="/assets/template/images/tmp/articles-image3.png"><img src="/assets/template/images/tmp/articles-image3.png" alt=""></a>
-                        <a href="/assets/template/images/tmp/articles-image4.png"><img src="/assets/template/images/tmp/articles-image4.png" alt=""></a>
+                    <div class="article-images">
+                        <div class="article-images__box">
+                            <div class="article-images__grid">
+                                <div class="article-images__item">
+                                    <a href="/assets/template/images/tmp/articles-image1.png" data-fancybox="gallery"><img src="/assets/template/images/tmp/articles-image1.png" alt=""></a>
+                                </div>
+                                <div class="article-images__item">
+                                    <a href="/assets/template/images/tmp/articles-image2.png" data-fancybox="gallery"><img src="/assets/template/images/tmp/articles-image2.png" alt=""></a>
+                                </div>
+                                <div class="article-images__item">
+                                    <a href="/assets/template/images/tmp/articles-image3.png" data-fancybox="gallery"><img src="/assets/template/images/tmp/articles-image3.png" alt=""></a>
+                                </div>
+                                <div class="article-images__item">
+                                    <a href="/assets/template/images/tmp/articles-image4.png" data-fancybox="gallery"><img src="/assets/template/images/tmp/articles-image4.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный
-                        эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также
-                        постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании
-                        модели развития. Значимость этих проблем настолько очевидна, что консультация с широким активом влечет за собой процесс внедрения и
-                        модернизации соответствующий условий активизации. С другой стороны новая модель организационной деятельности играет важную роль в
-                        формировании форм развития. Товарищи! начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации
-                        новых предложений. Таким образом укрепление и развитие структуры позволяет оценить значение системы обучения кадров, соответствует насущным
-                        потребностям.</p>
+                        эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. <span class="article__text--mobiles">Идейные соображения высшего порядка, а также
+                    постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании
+                    модели развития. Значимость этих проблем настолько очевидна, что консультация с широким активом влечет за собой процесс внедрения и
+                    модернизации соответствующий условий активизации. С другой стороны новая модель организационной деятельности играет важную роль в
+                    формировании форм развития. Товарищи! начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации
+                    новых предложений. Таким образом укрепление и развитие структуры позволяет оценить значение системы обучения кадров, соответствует насущным
+                    потребностям.</span></p>
                     <ul class="styled">
                         <li>Разнообразный и богатый опыт</li>
                         <li>Постоянное информационно-пропагандистское обеспечение</li>
@@ -378,9 +437,9 @@
                     <p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа систем массового участия.
                         Равным образом дальнейшее развитие различных форм деятельности позволяет оценить значение дальнейших направлений развития.</p>
 
-                    <p>Товарищи! дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке форм развития.
+                    <p class="article__text__buttom">Товарищи! дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке форм развития. <span class="article__text--mobiles">
                         Равным образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения
-                        высшего порядка, а также </p>
+                        высшего порядка, а также </span></p>
                 </div>
 
             </div>
@@ -389,40 +448,40 @@
                     <div class="sidebar-article__header">Похожие статьи</div>
                     <div class="sidebar-article__list">
                         <div class="sidebar-article__item">
-                            <a href="#" class="news-card">
-                                <div class="news-card__image">
+                            <a href="#" class="article-card">
+                                <div class="article-card__image">
                                     <img src="/assets/template/images/tmp/news2.png" alt="">
                                 </div>
-                                <div class="news-card__date-box">
-                                    <span class="news-card__date">01.02.2019</span>
+                                <div class="article-card__date-box">
+                                    <span class="article-card__date">01.02.2019</span>
                                 </div>
-                                <div class="news-card__name">
+                                <div class="article-card__name">
                                     Мультиформатный видеорегистратор нового поколения RVi-1HDR16L от RVi Group
                                 </div>
                             </a>
                         </div>
                         <div class="sidebar-article__item">
-                            <a href="#" class="news-card">
-                                <div class="news-card__image">
+                            <a href="#" class="article-card">
+                                <div class="article-card__image">
                                     <img src="/assets/template/images/tmp/news3.png" alt="">
                                 </div>
-                                <div class="news-card__date-box">
-                                    <span class="news-card__date">01.02.2019</span>
+                                <div class="article-card__date-box">
+                                    <span class="article-card__date">01.02.2019</span>
                                 </div>
-                                <div class="news-card__name">
+                                <div class="article-card__name">
                                     Представляем 4-канальный IP-видеорегистратор RVi со встроенным PoE-коммутатором
                                 </div>
                             </a>
                         </div>
                         <div class="sidebar-article__item">
-                            <a href="#" class="news-card">
-                                <div class="news-card__image">
+                            <a href="#" class="article-card">
+                                <div class="article-card__image">
                                     <img src="/assets/template/images/tmp/news4.png" alt="">
                                 </div>
-                                <div class="news-card__date-box">
-                                    <span class="news-card__date">31.01.2019</span>
+                                <div class="article-card__date-box">
+                                    <span class="article-card__date">31.01.2019</span>
                                 </div>
-                                <div class="news-card__name">
+                                <div class="article-card__name">
                                     Smartec представил уличный ИК-датчик с дальностью обнаружения до 300 м.
                                 </div>
                             </a>
@@ -481,7 +540,6 @@
                                     КПП: 012378987
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="footer-body__email-box">
@@ -506,9 +564,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="footer-body__burger toggle-footer-menu">
+                        <span></span>
+                    </div>
                 </div>
 
             </div>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Услуги монтажа</a></li>
+                    <li><a href="#">Гарантия и сервис</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="footer-body__header">Наш адрес</div>
+                <div class="footer-body__value">
+                    Россия, Москва, 197342,<br />
+                    ул. Длинноеназвание, дом 1, БЦ "Название", офис 1
+                </div>
+                <div class="footer-body__value">
+                    <a href="#" class="color-orange">Карта проезда</a>
+                </div>
+                <div class="footer-body__value">
+                    <div class="footer-body__requisites">
+                        <div class="footer-body__requisite">
+                            ОГРН: 012378987
+                        </div>
+                        <div class="footer-body__requisite">
+                            ИНН: 012378987
+                        </div>
+                        <div class="footer-body__requisite">
+                            КПП: 012378987
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="bottom-line">
@@ -527,6 +621,8 @@
         </div>
     </div>
 </div>
+
+<a href="#top" class="to-top"></a>
 
 <script src="/assets/template/vendor/jquery-3.2.1.min.js"></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>

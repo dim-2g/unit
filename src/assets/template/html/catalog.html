@@ -15,13 +15,16 @@
     </div>
 </div>
 
+<div class="overlay-light"></div>
+
 <div class="content">
     <div class="container">
         <h1>Поворотные AHD Видеокамеры</h1>
         <div class="catalog" id="mse2_mfilter">
-            <div class="catalog__sidebar">
-                <div class="catalog-filter">
-                    <form action="katalog-tovarov" method="post" id="mse2_filters">
+            <div class="catalog__sidebar" >
+                <a href="#" class="sidebar-close"></a>
+                <div class="catalog-filter" id="catalog-sidebar">
+                    <form action="" method="post" id="mse2_filters">
 
                         <div class="catalog-filter__widget catalog-filter__widget--brand">
                             <div class="catalog-filter__caption">Производитель</div>
@@ -125,6 +128,20 @@
                                         <span class="label">ActiveCam (39)</span>
                                     </label>
                                 </div>
+                                <div class="catalog-filter__item">
+                                    <label class="check-custom" for="brand-1">
+                                        <input class="checkbox" name="iagree" type="checkbox" value="Согласен" id="brand-1">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="label">ACTi (115)</span>
+                                    </label>
+                                </div>
+                                <div class="catalog-filter__item">
+                                    <label class="check-custom" for="brand-2">
+                                        <input class="checkbox" name="iagree" type="checkbox" value="Согласен" id="brand-2">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="label">AXIS (255)</span>
+                                    </label>
+                                </div>
                                 <div class="catalog-filter__collapse">
                                     <a href="#">Показать всех производителей</a>
                                 </div>
@@ -225,12 +242,79 @@
                     </form>
                 </div>
 
+                <div class="sidebar-bottom">
+                    <style>
+                        .sidebar-slider__item--1{
+                            background-image: url('/assets/template/images/slide-1-small.png');
+                        }
+                        .sidebar-slider__item--2{
+                            background-image: url('/assets/template/images/slide-1-small.png');
+                        }
+                    </style>
+                    <div class="sidebar-slider">
+
+                        <div class="sidebar-slider__box">
+                            <div class="sidebar-slider__items  sidebar-slider-js">
+
+                                <div>
+                                    <div class="sidebar-slider__item sidebar-slider__item--1">
+                                        <div class="sidebar-slider__info">
+                                            <div class="sidebar-slider__flag">
+                                                <div class="slider-flag slider-flag--action">Акция</div>
+                                            </div>
+                                            <div class="sidebar-slider__caption">
+                                                Поворотные<br /> AHD Видеокамеры
+                                            </div>
+                                            <div class="sidebar-slider__text">
+                                                При покупке  товара на сумму от  <nobr>32 000 руб.,</nobr>
+                                                бесплатная установка и тестирование оборудования
+                                                в день покупки.
+                                            </div>
+                                            <div class="sidebar-slider__link">
+                                                <a href="#" class="sidebar-slider__more">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="sidebar-slider__item sidebar-slider__item--2" style="background-image: url('/assets/template/images/slide-1.png');">
+                                        <div class="sidebar-slider__info">
+                                            <div class="sidebar-slider__flag">
+                                                <div class="slider-flag slider-flag--new">Новинка</div>
+                                            </div>
+                                            <div class="sidebar-slider__caption">
+                                                Второй<br /> слайд
+                                            </div>
+                                            <div class="sidebar-slider__text">
+                                                При покупке  товара на сумму от  32 000 руб.,
+                                                бесплатная установка и тестирование оборудования
+                                                в день покупки.
+                                            </div>
+                                            <div class="sidebar-slider__link">
+                                                <a href="#" class="sidebar-slider__more">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="sidebar-slider__nav"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
             <div class="catalog__content">
                 <div class="catalog-meta">
+                    <a data-fancybox="" href="#catalog-sidebar" class="catalog-filter-button">
+                        Фильтры
+                    </a>
                     <div class="catalog-sort">
-                        Сортировать по:
-                        <select name="" id="">
+                        Сортировать по: <span class="catalog-sort__select">Стоимости</span>
+                        <select name="" id="select-sort">
                             <option value="">Стоимости</option>
                             <option value="">Названию</option>
                         </select>
@@ -245,8 +329,49 @@
                 </div>
                 <div class="catalog__grid jumped">
                     <div class="grid-goods__item">
-                        //= include/product-card-popular.html
+                        <div class="product-card">
+                            <div class="product-card__flags">
+                                <div class="product-flag product-flag--popular">Популярное</div>
+                                <!--div class="product-flag product-flag--action">Акция</div-->
+                            </div>
+                            <div class="product-card__image">
+                                <a href="#"><img src="/assets/template/images/tmp/good1.png" alt="" /></a>
+                            </div>
+                            <div class="product-card__name">
+                                <a href="#">IP-камера Hikvision DS-2CD2622 FWD-IS</a>
+                            </div>
+                            <div class="product-card__options">
+                                <div class="product-option">
+                                    <div class="product-option__name"><span>Количество точек матрицы:</span></div>
+                                    <div class="product-option__value">2 Мп</div>
+                                </div>
+                                <div class="product-option">
+                                    <div class="product-option__name">Применение:</div>
+                                    <div class="product-option__value">уличная</div>
+                                </div>
+                                <div class="product-option">
+                                    <div class="product-option__name">Сетевой интерфейс:</div>
+                                    <div class="product-option__value">проводной</div>
+                                </div>
+                            </div>
+                            <div class="product-card__buy">
+                                <div class="product-card__box">
+                                    <div class="product-card__cost-old">
+                                        <span class="product-card__price-old">620</span>
+                                        <span class="product-card__currency-old">₽</span>
+                                    </div>
+                                    <div class="product-card__cost">
+                                        <span class="product-card__price">562</span>
+                                        <span class="product-card__currency">₽</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="product-card__to-cart">
+                                    в корзину
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="grid-goods__item">
                         //= include/product-card-popular.html
                     </div>
@@ -260,15 +385,24 @@
                         //= include/product-card-popular.html
                     </div>
                     <div class="grid-goods__item">
+                        //= include/product-card-popular.html
+                    </div>
+                    <div class="grid-goods__item">
+                        //= include/product-card-popular.html
+                    </div>
+                    <div class="grid-goods__item no-mobile">
+                        //= include/product-card-popular.html
+                    </div>
+                    <div class="grid-goods__item no-mobile">
                         //= include/product-card-newis.html
                     </div>
-                    <div class="grid-goods__item">
+                    <div class="grid-goods__item no-mobile">
                         //= include/product-card-newis.html
                     </div>
-                    <div class="grid-goods__item">
+                    <div class="grid-goods__item no-mobile">
                         //= include/product-card-newis.html
                     </div>
-                    <div class="grid-goods__item">
+                    <div class="grid-goods__item no-mobile">
                         //= include/product-card-newis.html
                     </div>
                 </div>
@@ -282,9 +416,9 @@
 </div>
 
 <div class="bottom-partners">
-    <div class="container">
+    <div class="container phablet-container">
         <div class="bottom-partners__header">Наши партнеры</div>
-        <div class="bottom-partners__grid">
+        <div class="bottom-partners__grid inner-partners-slider">
             <div class="bottom-partners__item">
                 <div class="bottom-partners__card">
                     <img src="/assets/template/images/partners/dkc.png" alt="">

@@ -2,7 +2,7 @@
 
 
 	<div class="main-category">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-category__grid category-slider">
 				<div class="main-category__item">
 					<a href="#" class="main-category__card main-category__card--video">
@@ -126,45 +126,67 @@
 			</div>
 		</div>
 	</div>
+
+	<style>
+		.main-slider__item--1{
+			background-image: url('/assets/template/images/slide-1.png');
+		}
+		@media (max-width: 450px){
+			.main-slider__item--1{
+				background-image: url('/assets/template/images/slide-1-small.png');
+			}
+		}
+		.main-slider__item--2{
+			background-image: url('/assets/template/images/slide-1.png');
+		}
+		@media (max-width: 450px){
+			.main-slider__item--2{
+				background-image: url('/assets/template/images/slide-1-small.png');
+			}
+		}
+	</style>
 	
 	<div class="main-slider">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-slider__box">
 				<div class="main-slider__items  main-slider-js">
-					<div class="main-slider__item" style="background-image: url('/assets/template/images/slide-1.png');">
-						<div class="main-slider__info">
-							<div class="main-slider__flag">
-								<div class="slider-flag slider-flag--action">Акция</div>
-							</div>
-							<div class="main-slider__caption">
-								Поворотные<br /> AHD Видеокамеры
-							</div>
-							<div class="main-slider__text">
-								При покупке  товара на сумму от  32 000 руб.,
-								бесплатная установка и тестирование оборудования
-								в день покупки.
-							</div>
-							<div class="main-slider__link">
-								<a href="#" class="main-slider__more">Подробнее</a>
+					<div>
+						<div class="main-slider__item main-slider__item--1">
+							<div class="main-slider__info">
+								<div class="main-slider__flag">
+									<div class="slider-flag slider-flag--action">Акция</div>
+								</div>
+								<div class="main-slider__caption">
+									Поворотные<br /> AHD Видеокамеры
+								</div>
+								<div class="main-slider__text">
+									При покупке  товара на сумму от  <nobr>32 000 руб.,</nobr>
+									бесплатная установка и тестирование оборудования
+									в день покупки.
+								</div>
+								<div class="main-slider__link">
+									<a href="#" class="main-slider__more">Подробнее</a>
+								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="main-slider__item" style="background-image: url('/assets/template/images/slide-1.png');">
-						<div class="main-slider__info">
-							<div class="main-slider__flag">
-								<div class="slider-flag slider-flag--new">Новинка</div>
-							</div>
-							<div class="main-slider__caption">
-								Второй<br /> слайд
-							</div>
-							<div class="main-slider__text">
-								При покупке  товара на сумму от  32 000 руб.,
-								бесплатная установка и тестирование оборудования
-								в день покупки.
-							</div>
-							<div class="main-slider__link">
-								<a href="#" class="main-slider__more">Подробнее</a>
+					<div>
+						<div class="main-slider__item main-slider__item--2" style="background-image: url('/assets/template/images/slide-1.png');">
+							<div class="main-slider__info">
+								<div class="main-slider__flag">
+									<div class="slider-flag slider-flag--new">Новинка</div>
+								</div>
+								<div class="main-slider__caption">
+									Второй<br /> слайд
+								</div>
+								<div class="main-slider__text">
+									При покупке  товара на сумму от  32 000 руб.,
+									бесплатная установка и тестирование оборудования
+									в день покупки.
+								</div>
+								<div class="main-slider__link">
+									<a href="#" class="main-slider__more">Подробнее</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -234,8 +256,15 @@
 		<div class="popular-tab__nav">
 			<div class="container">
 				<div class="popular-tab__list">
-					<a href="#" class="popular-tab__link active" data-tab=".xtab-popular">Самые популярные товары</a>
-					<a href="#" class="popular-tab__link" data-tab=".xtab-newis">Новинки нашего магазина</a>
+					<a href="#" class="popular-tab__link active" data-tab=".xtab-popular">
+						<span class="in-mobile">Популярные товары</span>
+						<span class="in-desktop">Самые популярные товары</span>
+					</a>
+					<span class="popular-tab__separator"></span>
+					<a href="#" class="popular-tab__link" data-tab=".xtab-newis">
+						<span class="in-mobile">Новинки</span>
+						<span class="in-desktop">Новинки нашего магазина</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -252,19 +281,19 @@
 						<div class="popular-goods__item">
 							//= include/product-card-popular.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-popular.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-popular.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-popular.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-popular.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-popular.html
 						</div>
 					</div>
@@ -291,19 +320,19 @@
 						<div class="popular-goods__item">
 							//= include/product-card-newis.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-newis.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-newis.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-newis.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-newis.html
 						</div>
-						<div class="popular-goods__item">
+						<div class="popular-goods__item no-mobile">
 							//= include/product-card-newis.html
 						</div>
 					</div>
@@ -321,9 +350,9 @@
 	</div>
 
 	<div class="main-partners">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-partners__header">Наши партнеры</div>
-			<div class="main-partners__grid">
+			<div class="main-partners__grid main-partners-slider">
 
 				<div class="main-partners__item">
 					<div class="main-partners__card">
@@ -401,7 +430,7 @@
 			<div class="main-news__tabs">
 				<div class="xtab active xtab-news-security">
 					<div class="main-news__grid">
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news1.png" alt="">
@@ -414,7 +443,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news2.png" alt="">
@@ -488,7 +517,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news1.png" alt="">
@@ -501,7 +530,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="main-news__item">
+						<div class="main-news__item no-mobile">
 							<a href="#" class="news-card">
 								<div class="news-card__image">
 									<img src="/assets/template/images/tmp/news2.png" alt="">
@@ -526,11 +555,11 @@
 	</div>
 
 	<div class="main-viewed">
-		<div class="container">
+		<div class="container phablet-container">
 			<div class="main-viewed__header">
 				Вы смотрели следующее:
 			</div>
-			<div class="main-viewed__grid jumped">
+			<div class="main-viewed__grid jumped main-viewed-slider">
 				<div class="main-viewed__item">
 					<a href="#" class="viewed-card">
 						<div class="viewed-card__image">
@@ -601,5 +630,6 @@
 	</div>
 
 //= include/footer.html
+
 </body>
 </html>
